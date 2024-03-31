@@ -12,6 +12,10 @@ body{
     font-family: Arial, Helvetica, sans-serif;
     background-color: black     ;
 }
+.container{
+    display: block;
+    margin: 0px 0px 0px 20px;
+}
 .Cadastro1{
     background-color: white;
     color: black;
@@ -23,6 +27,8 @@ body{
     box-shadow: 5px 5px 10px rgb(0, 0, 0);
 }
 .cadastro{
+    width: 100%;
+    height: 100%;
     background-color: black;
     box-shadow: color(srgb 0 0 0);
 
@@ -33,7 +39,7 @@ body{
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background-color: #E8E4D6;
+    background-color: white;
     padding: 3rem;
  }
 
@@ -91,6 +97,7 @@ body{
     display: flex;
     flex-direction:column;
     margin-bottom: 1.1rem;
+    box-shadow: black;
 
 }
 
@@ -98,12 +105,13 @@ body{
     margin: 0.6rem 0;
     padding: 0.8rem 1.2rem;
     border: none;
+    background-color: rgb(182, 182, 182);
     border-radius: 10px;
     box-shadow: 1px 1px 1px color #0000001c;
 }
 
 .input-box input:hover{
-    background-color: rgb(161, 161, 134);
+    background-color: rgb(167, 216, 158);
 }
 .input-box input:focus-visible{
     outline: 1px solid rgb(104, 192, 104);;
@@ -212,11 +220,18 @@ header{
 }
 
 .ler_mais{
+    width: 100%;
+    height: 80%;
     background-color: black;
     display: flex;
-    justify-content:center ;
     align-items: center;
+    justify-content: center;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+.ler_mais .img_cadastro{
+    width: 50%;
+    height: auto;
 
 }
 
@@ -237,21 +252,30 @@ header{
     flex-direction: column;
 }
 
-@media screen and (max-width: 1024px){
-    .ler_mais{
+
+
+
+@media screen and (max-width: 1024px) {
+    .ler_mais {
         flex-direction: column;
         width: 100%;
-
-        
+        height: 110%;
     }
 
-    .img  img {
-        width: 20%;
-
+    .ler_mais .img_cadastro img{
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
     }
 
-    .icones{
-        margin: 160px;
+    .img img {
+        width: 100%;
+        max-width: 200px; /* Defina um valor máximo para a largura da imagem */
+        height: auto; /* Para manter a proporção da imagem */
+    }
+
+    .icones {
+        margin: 20px; /* Reduzindo a margem */
         display: flex;
         align-items: center;
         justify-content: center;
@@ -259,50 +283,28 @@ header{
         height: 70px;
     }
 
-    .Cadastro1{
+    .Cadastro1 {
         display: flex;
         align-items: center;
         justify-content: center;
         flex-direction: column;
-
-        
-    }
-}
-
-@media screen and (max-width: 1024px){
-
-    .cadastro{
-        width: 50%;
     }
 
-    .form{
+
+    .form {
         width: 100%;
     }
 
-}
-
-@media screen and  (max-width: 1024px){
-    .cadastro {
-        width: 90%;
-        height: auto;
-    }
-
-    .input-group{
+    .input-group {
+        margin: 20px 0;
         flex-direction: column;
         overflow: scroll;
         flex-wrap: nowrap;
         max-height: 10rem;
         padding-right: 5rem;
+    }
 
-    }
-    .gender-input{
-        margin-top: 2rem;
-        
-    }
-    .gender-group{
-        flex-direction: column;
-    }
-    .gender-input{
-        margin-top: 0.5rem;
+    .gender-input {
+        margin-top: 1rem; /* Ajustando a margem superior */
     }
 }
